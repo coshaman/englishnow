@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="KO">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+    <title>개인정보 지킴이</title>
+<!--
+
+Shinsung High School, 2022
+봉사활동
+    개인정보 지킴이
+    프로젝트2
+-->
+
+    </head>
+    
+    <body>
+    
+<textarea id="here"></textarea>
+<button onclick="dod2();">click</button>
+<br><p id="bod"></p>
+<button onclick="dod3();">click</button>
+<br><p id="bod2"></p>
+<script>
+let a, b;
+let c  = ["a", "b"];
+function shuffle(array) {
+  array.sort(() => Math.random() - 0.5);
+}
+function dod2() {
+	a = document.getElementById("here").value;
+	b = a.split(". ");
+	c = a.split(". ");
+	document.getElementById("bod").innerHTML += b[0]+". <br>";
+	document.getElementById("bod").innerHTML += b[1]+". <br><br>";
+	b.shift(); b.shift();
+	shuffle(b);
+	for(let i=0;i<b.length;i++){
+		document.getElementById("bod").innerHTML += "<input type='text' style='width:8px;'></input>" + b[i]+". <br>";
+	}
+	
+}
+function dod3(){
+	for(let j=0;j<c.length;j++){
+		document.getElementById("bod2").innerHTML += c[j]+". <br>";
+}
+}
+</script>
+  </body>
+</html>
