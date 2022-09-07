@@ -8,8 +8,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
-
-    <title>개인정보 지킴이</title>
+<style>@font-face{font-family:"this";src:url('신명조체.TTF';}</style>
+    <title>영어 학습 프로그램</title>
 <!--
 
 Shinsung High School, 2022
@@ -20,23 +20,32 @@ Shinsung High School, 2022
 
     </head>
     
-    <body>
+    <body style="font-family:'this'">
     
 <textarea id="here"></textarea>
 <button onclick="dod2();">click</button>
+<button onclick="dod4();">clear</button>
 <br><p id="bod"></p>
 <button onclick="dod3();">click</button>
+
+
 <br><p id="bod2"></p>
 <script>
 let a, b;
 let c  = ["a", "b"];
+function dod4(){
+	document.getElementById("bod").innerHTML='';
+	document.getElementById("here").value='';
+	document.getElementById("bod2").innerHTML='';
+}
 function shuffle(array) {
   array.sort(() => Math.random() - 0.5);
 }
-function dod2() {
+function dod2() {document.getElementById("bod").innerHTML="";
 	a = document.getElementById("here").value;
 	b = a.split(". ");
-	c = a.split(". ");
+	c = a.split(". ");document.getElementById("here").value="";
+
 	document.getElementById("bod").innerHTML += b[0]+". <br>";
 	document.getElementById("bod").innerHTML += b[1]+". <br><br>";
 	b.shift(); b.shift();
